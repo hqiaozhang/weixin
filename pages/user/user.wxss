@@ -1,0 +1,57 @@
+/* pages/my/my.wxss */
+
+.container {
+  padding: 16px;
+  font-size: 14px;
+}
+.header {
+  /* background: url("./images/my/top-bg.png") no-repeat; */
+  background-size: 100% 100%;
+  background: #5bafff;
+  border-radius: 12px;
+  width: calc(100% - 32px);
+  height: 102px; 
+  position: relative;
+  margin-top: 32px;
+  padding: 16px;
+  color: #fff;
+  float: left;
+}
+.userinfo-avatar {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border: 1px solid #555;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  left: 16px;
+}
+ 
+.user-name {
+  float: left;
+  margin-left: 96px;
+}
+.row {
+  display: flex;
+  width: 100%;
+  float: left;
+  margin-top: 35px;
+  text-align: center;
+  font-size: 14px;
+}
+.col {
+  flex: 1;
+}
+.col:first-child {
+  border-right: 1px solid #80bcff;
+}
+.menus {
+  float: left;
+  width: 100%;
+  line-height: 54px;
+  color: #1A1A1A;
+}
+.menus navigator {
+  border-bottom: 1px solid #eee;
+}

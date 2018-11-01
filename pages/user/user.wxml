@@ -1,0 +1,17 @@
+<view class="container">
+  <view class='header'>
+    <image class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+    <text class='user-name'>150****7968</text>
+    <view class='row'>
+      <view class='col'>我的设备  1</view>
+      <view class='col'>我的关注  5</view>
+    </view>
+  </view>
+  <view class='menus'>
+    <navigator>我的设备</navigator>
+    <navigator>我的关注</navigator>
+    <navigator>我的收藏</navigator>
+    <navigator>关于我们</navigator>
+    <navigator>联系我们</navigator>
+  </view>
+</view>
