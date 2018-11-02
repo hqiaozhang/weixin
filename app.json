@@ -1,15 +1,16 @@
 {
-  "pages":[
-    "pages/user/user",
+  "pages": [
     "pages/index/index",
-    "pages/product/product"
-    
+    "pages/auth/auth",
+    "pages/user/user",
+    "pages/product/product",
+    "pages/splash/splash"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "健康空气管家",
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#A5AAB2",

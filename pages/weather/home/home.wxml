@@ -1,0 +1,2 @@
+<!--pages/weather/home/home.wxml-->
+<web-view bindload="loadSuccess" src="{{webUrl}}#wechat_redirect"></web-view>

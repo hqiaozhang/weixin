@@ -1,0 +1,8 @@
+<!--pages/splash/splash.wxml-->
+<!-- 欢迎页 -->
+<view class="container full_screen">
+  <image id="splash" src="{{imageUrl}}"></image>
+</view>
+<button catchtap='goHome' class="home_button" type="primary">
+  进入
+</button>

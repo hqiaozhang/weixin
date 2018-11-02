@@ -1,50 +1,37 @@
- 
+// pages/splash/splash.js
 let constant = require('../../utils/constant.js')
+let app = getApp()
+let showTime = 3000
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    imageUrl: `${constant.mobileDomain}/static/images/wechat/splash.png`
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 隐藏转发
+    //隐藏转发
     wx.hideShareMenu({})
-    let firstFlag = wx.getStorageInfoSync(constant.firstFlagKey)
-    console.log('firstFlag', firstFlag)
-    if(firstFlag  && firstFlag == 1) {
-      // 返回值中只会出现小程序已经向用户请求过的权限
-      wx.getSetting({
-        success: res => {
-          // 用户授权结果
-          console.log(res.authSetting)
-          if (res.authSetting) {
-
-          }
-          //调到授权用户信息界面
-          wx.redirectTo({
-            url: '/pages/auth/auth',
-          })
-        }
-      })
-    }else {
-      //首次登陆
-      wx.setStorage({
-        key: constant.firstFlagKey,
-        data: 1,
-      })
-      // redirectTo关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。
-      wx.redirectTo({
-        url: '../splash/splash',
+  },
+  getUserInfo() {
+    if (app.globalData.userInfo) {
+      setTimeout(() => {
+        // 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面
+        wx.switchTab({
+          url: '/pages/weather/home/home'
+        })
+      }, showTime)
+      wx.getUserInfo({
+        success: (res) => { 
+          app.globalData.userInfo = res.userInfo
+        },
       })
     }
-    
-
   },
 
   /**

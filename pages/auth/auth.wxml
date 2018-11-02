@@ -1,0 +1,12 @@
+<!--pages/auth/auth.wxml-->
+<view class="container full_screen auth_container">
+
+  <image class="logo" src="../../images/logo_indoor.png"></image>
+
+  <text class="auth_title">健康空气管家申请获得以下权限：</text>
+  
+  <text class="auth_info">获得你的公开信息（昵称，头像等）</text>
+
+  <button class="common_btn auth_button" type="primary" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">确认授权</button>
+
+</view>
